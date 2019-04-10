@@ -1,13 +1,24 @@
 <template>
   <div>
-    <nuxt />
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <nuxt-link to="/">Home</nuxt-link>
+      </li>
+      <li>
+        <nuxt-link to="/about-us">About Us</nuxt-link>
+      </li>
+      <li>
+        <nuxt-link to="/contact-us">Contact Us</nuxt-link>
+      </li>
+    </ul>
+    <nuxt/>
   </div>
 </template>
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -51,5 +62,35 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #4CAF50;
 }
 </style>
